@@ -1,55 +1,53 @@
 import React, { useState } from "react";
-
+import frameImg from "../../assets/images/Frame 427318907.svg";
+import arrow from "../../assets/images/Arrow.svg";
 const Aside = () => {
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
 
   const handleSubmit = () => {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (emailPattern.test(email)) {
-      console.log('Email submitted:', email);
-      setMessage('Success! Email submitted.');
-      setEmail('');
+      console.log("Email submitted:", email);
+      setEmail("");
     } else {
-      setMessage('Please enter a valid email address.');
+      console.log("Email failed");
     }
   };
 
   return (
-    <div className="aside flex flex-col items-center justify-center py-2">
-      <div className="aside-header text-center mb-5 max-w-3xl">
-        <span className="text-lg font-light text-white">
-          Elevate your student experience with SyncHub's cutting-edge solutions designed to maximize productivity and collaboration.
-        </span>
-      </div>
+    <>
+      <div className="min-h-screen flex flex-col items-center justify-evenly p-10">
+        {/* text  */}
+        <div className="flex flex-col gap-12">
+          <div className="max-w-3xl text-3xl md:text-5xl font-light">
+            Elevate your student experience with SyncHub's cutting-edge
+            solutions designed to maximize productivity and collaboration.
+          </div>
 
-      <div className="aside-form flex">
-        <input
-          type="email"
-          placeholder="Enter your email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="max-h-10 px-3 py-2 border-none rounded-l-lg bg-gradient-to-r from-indigo-900 to-cyan-400 text-white w-52"
-        />
-        <button
-          onClick={handleSubmit}
-          className="border-none rounded-r-lg bg-cyan-400 h-10 cursor-pointer flex items-center justify-center"
-        >
-          <img src=".../images/Arrow.svg" alt="Submit" className="h-full" />
-        </button>
-      </div>
-
-      {message && (
-        <div className="text-white mt-2">
-          {message}
+          <div className="flex">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="max-h-10 px-3 py-2 border-none bg-gradient-to-r from-indigo-900 to-cyan-400 text-white w-56 rounded-l-3xl"
+            />
+            <button
+              onClick={handleSubmit}
+              className="border-none bg-cyan-400 h-10 flex items-center justify-center rounded-r-3xl p-1"
+            >
+              <img src={arrow} alt="Submit" className="h-full" />
+            </button>
+          </div>
         </div>
-      )}
 
-      <div className="frame-image flex items-center justify-center pt-8">
-        <img src=".../images/Frame 427318907.svg" alt="Frame" className="max-w-full max-h-48" />
+        {/* image  */}
+        <div class="flex items-center justify-center pt-8">
+          <img src={frameImg} alt="Frame" class="max-w-full max-h-32" />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

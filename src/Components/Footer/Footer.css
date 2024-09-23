@@ -1,0 +1,60 @@
+/* footer */
+footer {
+    background: linear-gradient(90deg, #52FFEB 0%, #316A99 100%);
+    color: black;
+    border-radius: 0 3rem 0 5rem;
+    padding-block-start: 5px;
+  }
+  
+  .footer-content {
+    max-width: 80%;
+    height: 14rem;
+    margin-inline: 6rem;
+  }
+  
+  .logo {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  
+  .footer-lists {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: flex-start;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 0 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .list h6 {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  .list h6,
+  .list p,
+  .list span {
+    margin: 5px 5px;
+  }
+  
+  .subscribe-btn {
+    padding: 8px 18px;
+    margin: 2rem 0;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
