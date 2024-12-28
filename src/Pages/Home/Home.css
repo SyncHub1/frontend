@@ -308,8 +308,10 @@
 /* Mobile Screen Layout (Flex Column) */
 @media (max-width: 768px) {
   .connect-container {
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    padding: 1rem;
     margin: 0;
   }
 
@@ -317,6 +319,7 @@
     margin-top: 120px;
     padding-top: 120px;
     text-align: center;
+    max-width: 400px;
   }
 
   .image {
@@ -357,7 +360,7 @@
 .input-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   border-radius: 50px;
   background: #ffffff;
   overflow: hidden;
