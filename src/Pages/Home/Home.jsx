@@ -203,7 +203,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section>
+      <section className="w-full flex flex-row flex-wrap-reverse justify-evenly items-end py-4 md:py-24 gap-20 md:gap-0">
         <div className="content-header">
           <h2>Create a content that</h2>
           <h3>INSPIRES</h3>
@@ -238,7 +238,7 @@ const Home = () => {
       </section>
 
       <section>
-        <div className="connect-container">
+        <div className="md:w-[90vw] connect-container">
           <div className="text-section">
             <div className="badge">Easy to manage</div>
             <h1>
@@ -250,7 +250,7 @@ const Home = () => {
               onboarding talent.
             </p>
           </div>
-          <div className="image-section">
+          <div className="md:w-[90vw] image-section">
             <img src={img5} alt="Connect" className="image" />
             <h2>Technika helps you connect</h2>
             <button className="demo-button">Schedule a live demo!</button>
@@ -293,20 +293,20 @@ const Home = () => {
         </div>
       </section>
 
-      <section ref={scroll}>
-        <div className="waitlist-container">
-          <h2>Join Our Waitlist</h2>
-          <form className="input-container" onSubmit={handleWaitlist}>
-            <input
-              type="email"
-              placeholder="Enter your mail address"
-              value={email}
-              onChange={(e) => setemail(e.target.value)}
-            />
-            <input type="submit" value="Submit" />
-          </form>
-        </div>
-      </section>
+        <section ref={scroll}>
+          <div className="md:w-[90vw]  waitlist-container">
+            <h2>Join Our Waitlist</h2>
+            <form className="input-container" onSubmit={handleWaitlist}>
+              <input
+                type="email"
+                placeholder="Enter your mail address"
+                value={email}
+                onChange={(e) => setemail(e.target.value)}
+              />
+              <input type="submit" value="Submit" />
+            </form>
+          </div>
+        </section>
     </div>
   );
 };
